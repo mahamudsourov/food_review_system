@@ -1,5 +1,7 @@
 const restaurantList = document.getElementById('restaurant-list');
 const nextButton = document.getElementById('next-button');
+const menuContainer = document.getElementById('menu-container');
+const menuItemsList = document.getElementById('menu-items');
 
 const restaurants = [
   {
@@ -79,26 +81,26 @@ function displayRestaurants() {
 }
 
 
+// Function to display menu of selected restaurant
 function showMenu(restaurant) {
-  // Implement your menu display logic using HTML, TailwindCSS, and JavaScript
-  // This example assumes you have a separate element for the menu
-  const menuElement = document.getElementById('menu-container'); // Replace with your element ID
-  menuElement.innerHTML = ''; // Clear previous menu content
+  menuContainer.classList.remove('hidden'); // Make menu container visible
+  menuItemsList.innerHTML = ''; // Clear previous menu items
+
   restaurant.menu.forEach((item) => {
-    const menuItem = document.createElement('div');
-    menuItem.classList.add('p-2', 'border-b');
+    const menuItem = document.createElement('li');
+    menuItem.classList.add('p-2', 'border-b', 'hover:bg-gray-200');
     menuItem.textContent = `${item.name} ($${item.price})`;
-    menuElement.appendChild(menuItem);
+    menuItemsList.appendChild(menuItem);
   });
 
   // Enable "Next" button after selecting a restaurant
   nextButton.classList.remove('disabled');
 }
 
-// Function to handle "Next" button click, leading to review page
+// Event listener for "Next" button (fix included)
 nextButton.addEventListener('click', () => {
   // Implement your logic to navigate to the review page, possibly passing the selected restaurant
   console.log('Navigate to review page for selected restaurant');
 });
 
-displayRestaurants(); // Call function to display initial restaurant list
+displayRestaurants(); 
