@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Reviews - Login</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.4.0/dist/daisyui.min.css" rel="stylesheet">
+</head>
+<body class="bg-cover bg-no-repeat" style="background-image: url('path/to/your/login-background.jpg');">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8">Restaurant Reviews - Login</h1>
+
+    <div class="card w-96 mx-auto shadow-md">
+      <div class="card-body">
+        <form id="login-form" class="space-y-4">
+          <div class="form-control">
+            <label for="username" class="label">Username</label>
+            <input type="text" id="username" name="username" class="input input-bordered" required />
+          </div>
+          <div class="form-control">
+            <label for="password" class="label">Password</label>
+            <input type="password" id="password" name="password" class="input input-bordered" required />
+          </div>
+          <div class="form-control">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <a href="register.html" class="btn btn-link btn-sm float-right">Register</a>
+          </div>
+        </form>
+
+        <div id="error-message" class="text-red-500 text-center hidden"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>

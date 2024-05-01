@@ -5,10 +5,14 @@ const menuContainer = document.getElementById('menu-container');
 const menuItemsList = document.getElementById('menu-items');
 const reviewContainer = document.getElementById('review-container');
 const reviewForm = document.getElementById('review-form');
+const userReviews = document.getElementById('user-reviews');
+const userReviewsList = document.getElementById('user-reviews-list');
 
 const restaurants = [
   {
     name: "Restaurant A",
+    image: "https://example.com/restaurant-a.jpg",
+
     menu: [
       { name: "Dish 1", price: 10.99 },
       { name: "Dish 2", price: 12.50 },
@@ -70,14 +74,22 @@ const restaurants = [
 ];
 
 
+// Function to create and display restaurant list items
 function displayRestaurants() {
-  restaurantList.innerHTML = '';
+  restaurantList.innerHTML = ''; // Clear previous list items
   restaurants.forEach((restaurant) => {
     const listItem = document.createElement('li');
-    listItem.classList.add('p-2', 'border-b', 'hover:bg-gray-200');
+    listItem.classList.add('p-2', 'border-b', 'flex items-center hover:bg-gray-200');
+    const imageContainer = document.createElement('div');
+    imageContainer.classList.add('w-16', 'h-16', 'mr-4');
+    const image = document.createElement('img');
+    image.src = restaurant.image; // Set image source from restaurant data
+    image.alt = restaurant.name;
+    imageContainer.appendChild(image);
+    listItem.appendChild(imageContainer);
     listItem.textContent = restaurant.name;
     listItem.addEventListener('click', () => {
-      showMenu(restaurant);
+      showMenu(restaurant); // Call function to display menu
     });
     restaurantList.appendChild(listItem);
   });
@@ -120,7 +132,7 @@ reviewForm.addEventListener('submit', (event) => {
   };
   // Add review data to the selected restaurant (replace with your data storage logic)
   const selectedRestaurantIndex = /* Get index of selected restaurant */ // Implement logic to get the selected restaurant
-  restaurants[selectedRestaurantIndex].reviews.push(reviewData);
+    restaurants[selectedRestaurantIndex].reviews.push(reviewData);
 
   // Calculate average rating for each restaurant
   restaurants.forEach((restaurant) => {
@@ -137,6 +149,17 @@ reviewForm.addEventListener('submit', (event) => {
   // Hide review form and show "Sort Restaurants" button
   reviewContainer.classList.add('hidden');
   sortButton.classList.remove('hidden');
+
+  // Hide review form and show user reviews
+  // reviewContainer.classList.add('hidden');
+  userReviews.classList.remove('hidden');
+
+  // Display submitted review in user reviews card
+  const reviewItem = document.createElement('li');
+  reviewItem.classList.add('p-2', 'border-b', 'hover:bg-gray-200');
+  // Customize content based on your review data structure
+  reviewItem.textContent = `Restaurant: ${restaurants[selectedRestaurantIndex].name}, Rating: ${reviewData.rating}, Comment: ${reviewData.comment}`;
+  userReviewsList.appendChild(reviewItem);
 
   // Display updated restaurant list (consider calling displayRestaurants again)
   console.log('Restaurants sorted based on average rating');
