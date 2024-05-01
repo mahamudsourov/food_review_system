@@ -27,5 +27,5 @@ registerForm.addEventListener('submit', (event) => {
   alert('Registration successful!'); // Replace with appropriate feedback
 
   // Redirect to login page after successful registration
-  window.location.href = 'login.html';
+  window.location.href = 'home.html';
 });
