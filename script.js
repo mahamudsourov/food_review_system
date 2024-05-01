@@ -10,9 +10,9 @@ const userReviewsList = document.getElementById('user-reviews-list');
 
 const restaurants = [
   {
-    name: "Restaurant A",
-    image: "https://example.com/restaurant-a.jpg",
-
+    name: "Food Court",
+    image: "images/about.jpg", // Replace with actual image path
+    description: "Delicious pizzas made with fresh ingredients.",
     menu: [
       { name: "Dish 1", price: 10.99 },
       { name: "Dish 2", price: 12.50 },
@@ -22,7 +22,7 @@ const restaurants = [
     reviews: [],
   },
   {
-    name: "Restaurant A",
+    name: "KFC",
     menu: [
       { name: "Dish 1", price: 10.99 },
       { name: "Dish 2", price: 12.50 },
@@ -32,7 +32,7 @@ const restaurants = [
     reviews: [],
   },
   {
-    name: "Restaurant A",
+    name: "Green Garden",
     menu: [
       { name: "Dish 1", price: 10.99 },
       { name: "Dish 2", price: 12.50 },
@@ -42,7 +42,7 @@ const restaurants = [
     reviews: [],
   },
   {
-    name: "Restaurant A",
+    name: "Tasty Treats",
     menu: [
       { name: "Dish 1", price: 10.99 },
       { name: "Dish 2", price: 12.50 },
@@ -52,7 +52,7 @@ const restaurants = [
     reviews: [],
   },
   {
-    name: "Restaurant A",
+    name: "Amer Food",
     menu: [
       { name: "Dish 1", price: 10.99 },
       { name: "Dish 2", price: 12.50 },
@@ -62,7 +62,7 @@ const restaurants = [
     reviews: [],
   },
   {
-    name: "Restaurant A",
+    name: "Safus Pizza",
     menu: [
       { name: "Dish 1", price: 10.99 },
       { name: "Dish 2", price: 12.50 },
@@ -72,25 +72,40 @@ const restaurants = [
     reviews: [],
   },
 ];
-
-
-// Function to create and display restaurant list items
 function displayRestaurants() {
   restaurantList.innerHTML = ''; // Clear previous list items
+
   restaurants.forEach((restaurant) => {
     const listItem = document.createElement('li');
-    listItem.classList.add('p-2', 'border-b', 'flex items-center hover:bg-gray-200');
+    listItem.classList.add('restaurant-item', 'flex', 'items-center', 'p-2', 'border-b', 'hover:bg-gray-200');
+
+    // Image container
     const imageContainer = document.createElement('div');
-    imageContainer.classList.add('w-16', 'h-16', 'mr-4');
+    imageContainer.classList.add('mr-4', 'w-16', 'h-16');
     const image = document.createElement('img');
-    image.src = restaurant.image; // Set image source from restaurant data
+    image.src = restaurant.image;
     image.alt = restaurant.name;
     imageContainer.appendChild(image);
     listItem.appendChild(imageContainer);
-    listItem.textContent = restaurant.name;
+
+    // Restaurant name and description container
+    const contentContainer = document.createElement('div');
+    contentContainer.classList.add('flex-grow');
+    const name = document.createElement('h3');
+    name.classList.add('text-lg', 'font-medium', 'mb-1');
+    name.textContent = restaurant.name;
+    const description = document.createElement('p');
+    description.textContent = restaurant.description;
+    contentContainer.appendChild(name);
+    contentContainer.appendChild(description);
+    listItem.appendChild(contentContainer);
+
+    // Handle menu display (assuming a separate function for menu logic)
     listItem.addEventListener('click', () => {
-      showMenu(restaurant); // Call function to display menu
+      showMenu(restaurant); // Call function to display menu (implement in a separate function)
+      // Update next button state based on menu logic (implement logic)
     });
+
     restaurantList.appendChild(listItem);
   });
 }
@@ -164,4 +179,5 @@ reviewForm.addEventListener('submit', (event) => {
   // Display updated restaurant list (consider calling displayRestaurants again)
   console.log('Restaurants sorted based on average rating');
 });
+
 displayRestaurants(); 

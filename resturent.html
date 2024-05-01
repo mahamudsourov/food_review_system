@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -45,7 +45,7 @@
                 <ul class="menu menu-horizontal px-1">
                     <li><a href="home.html">Home</a></li>
                     <li><a href="resturent.html">Resturents</a></li>
-                    <li><a>About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a>Logout</a></li>
                 </ul>
             </div>
@@ -60,7 +60,8 @@
         <!-- resturents list -->
         <div class="container mx-auto px-4 py-8">
             <h1 class="text-3xl font-bold mb-4">Restaurants</h1>
-            <ul id="restaurant-list" class="list-none"></ul>
+            <ul id="restaurant-list" class="list-none">
+            </ul>
             <!-- menu -->
             <div id="menu-container" class="hidden bg-white rounded p-4 mt-4">
                 <h2>Menu</h2>
@@ -101,9 +102,6 @@
                 <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Submit Review</button>
             </form>
         </div>
-        <button id="next-button" class="bg-blue-500 text-white font-bold py-2 px-4 rounded disabled">Next</button>
-        <button id="sort-button" class="bg-green-500 text-white font-bold py-2 px-4 rounded hidden">Sort
-            Restaurants</button>
         </div>
         <!-- review end -->
         <!-- Footer -->
