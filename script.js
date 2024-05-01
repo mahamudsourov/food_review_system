@@ -23,6 +23,8 @@ const restaurants = [
   },
   {
     name: "KFC",
+    image: "images/about.jpg", // Replace with actual image path
+    description: "Delicious pizzas made with fresh ingredients.",
     menu: [
       { name: "Dish 1", price: 10.99 },
       { name: "Dish 2", price: 12.50 },
@@ -33,6 +35,8 @@ const restaurants = [
   },
   {
     name: "Green Garden",
+    image: "images/about.jpg", // Replace with actual image path
+    description: "Delicious pizzas made with fresh ingredients.",
     menu: [
       { name: "Dish 1", price: 10.99 },
       { name: "Dish 2", price: 12.50 },
@@ -43,6 +47,8 @@ const restaurants = [
   },
   {
     name: "Tasty Treats",
+    image: "images/about.jpg", // Replace with actual image path
+    description: "Delicious pizzas made with fresh ingredients.",
     menu: [
       { name: "Dish 1", price: 10.99 },
       { name: "Dish 2", price: 12.50 },
@@ -53,6 +59,8 @@ const restaurants = [
   },
   {
     name: "Amer Food",
+    image: "images/about.jpg", // Replace with actual image path
+    description: "Delicious pizzas made with fresh ingredients.",
     menu: [
       { name: "Dish 1", price: 10.99 },
       { name: "Dish 2", price: 12.50 },
@@ -63,6 +71,8 @@ const restaurants = [
   },
   {
     name: "Safus Pizza",
+    image: "images/about.jpg", // Replace with actual image path
+    description: "Delicious pizzas made with fresh ingredients.",
     menu: [
       { name: "Dish 1", price: 10.99 },
       { name: "Dish 2", price: 12.50 },
