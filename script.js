@@ -74,6 +74,7 @@ const restaurants = [
 ];
 
 
+// Function to create and display restaurant list items
 function displayRestaurants() {
   restaurantList.innerHTML = ''; // Clear previous list items
   restaurants.forEach((restaurant) => {
