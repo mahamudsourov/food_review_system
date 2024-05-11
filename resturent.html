@@ -10,44 +10,16 @@
 </head>
 
 <body class="container mx-auto">
-    <!-- navbar -->
-    <div class="navbar bg-base-100">
-        <div class="navbar-start">
-            <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h8m-8 6h16" />
-                    </svg>
-                </div>
-                <ul tabindex="0"
-                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a>Item 1</a></li>
-                    <li>
-                        <a>Parent</a>
-                        <ul class="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a>Item 3</a></li>
-                </ul>
-            </div>
-            <a class="btn btn-ghost text-xl">Diuian Foodie Review</a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="resturent.html">Resturents</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a>Logout</a></li>
-            </ul>
-        </div>
-        <div class="navbar-end">
-            <a class="btn">Button</a>
-        </div>
-    </div>
+    <div class="container mx-auto px-4 py-8">
+        <header class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold">Diuians Foodie Review</h1>
+            <span class="bg-rose-400 px-32 py-4 space-x-10 rounded-lg">
+                <a href="home.html" class="hover:text-blue-700">Home</a>
+                <a href="resturent.html" class=" hover:text-blue-700">Resturents</a>
+                <a href="about.html" class=" hover:text-blue-700">About</a>
+                <a href="profile.html" class=" hover:text-blue-700">Profile</a>
+            </span>
+        </header>
     <!-- nav end -->
     <!-- resturents list -->
     <div class="container mx-auto px-4 py-8">
@@ -96,6 +68,12 @@
     </div>
     </div>
     <!-- review end -->
+    <!-- user reviews -->
+    <div id="user-reviews" class="hidden">
+      <h2>Your Reviews</h2>
+      <ul id="user-reviews-list" class="list-none"></ul>
+    </div>
+    <!-- end of user reviewa -->
     <!-- Footer -->
     <footer class="footer p-10 bg-base-200 text-base-content">
         <aside>

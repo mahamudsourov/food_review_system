@@ -11,7 +11,7 @@ const userReviewsList = document.getElementById('user-reviews-list');
 const restaurants = [
   {
     name: "Food Court",
-    image: "images/about.jpg", // Replace with actual image path
+    image: "images/bachler.jpg", // Replace with actual image path
     description: "Delicious pizzas made with fresh ingredients.",
     menu: [
       { name: "Margherita Pizza", image: "images/margherita.jpg", price: 12.99 },
