@@ -26,7 +26,7 @@ const restaurants = [
   },
   {
     name: "KFC",
-    image: "images/about.jpg", // Replace with actual image path
+    image: "images/cassino.jpg", // Replace with actual image path
     description: "Delicious pizzas made with fresh ingredients.",
     menu: [
       { name: "Margherita Pizza", image: "images/margherita.jpg", price: 12.99 },
@@ -40,7 +40,7 @@ const restaurants = [
   },
   {
     name: "Green Garden",
-    image: "images/about.jpg", // Replace with actual image path
+    image: "images/goodvibes.jpg", // Replace with actual image path
     description: "Delicious pizzas made with fresh ingredients.",
     menu: [
       { name: "Margherita Pizza", image: "images/margherita.jpg", price: 12.99 },
@@ -52,7 +52,7 @@ const restaurants = [
   },
   {
     name: "Tasty Treats",
-    image: "images/about.jpg", // Replace with actual image path
+    image: "images/hungers.jpg", // Replace with actual image path
     description: "Delicious pizzas made with fresh ingredients.",
     menu: [
       { name: "Margherita Pizza", image: "images/about.jpg", price: 12.99 },
@@ -69,7 +69,7 @@ const restaurants = [
   },
   {
     name: "Amer Food",
-    image: "images/about.jpg", // Replace with actual image path
+    image: "images/jourcs.jpg", // Replace with actual image path
     description: "Delicious pizzas made with fresh ingredients.",
     menu: [
       { name: "Margherita Pizza", image: "images/about.jpg", price: 12.99 },
@@ -81,7 +81,33 @@ const restaurants = [
   },
   {
     name: "Safus Pizza",
-    image: "images/about.jpg", // Replace with actual image path
+    image: "images/peribites.jpg", // Replace with actual image path
+    description: "Delicious pizzas made with fresh ingredients.",
+    menu: [
+      { name: "Margherita Pizza", image: "images/about.jpg", price: 12.99 },
+      { name: "Pepperoni Pizza", image: "images/about.jpg", price: 14.99 },
+      { name: "Pepperoni Pizza", image: "images/pepperoni.jpg", price: 14.99 },
+      // Add more menu items with name, image, and price
+    ],
+    rating: 0,
+    reviews: [],
+  },
+  {
+    name: "Safus Pizza",
+    image: "images/tastytreat.jpg", // Replace with actual image path
+    description: "Delicious pizzas made with fresh ingredients.",
+    menu: [
+      { name: "Margherita Pizza", image: "images/about.jpg", price: 12.99 },
+      { name: "Pepperoni Pizza", image: "images/about.jpg", price: 14.99 },
+      { name: "Pepperoni Pizza", image: "images/pepperoni.jpg", price: 14.99 },
+      // Add more menu items with name, image, and price
+    ],
+    rating: 0,
+    reviews: [],
+  },
+  {
+    name: "Safus Pizza",
+    image: "images/vugbari.jpg", 
     description: "Delicious pizzas made with fresh ingredients.",
     menu: [
       { name: "Margherita Pizza", image: "images/about.jpg", price: 12.99 },
