@@ -11,6 +11,7 @@ const userReviewsList = document.getElementById('user-reviews-list');
 const restaurants = [
     // Replace with your actual restaurant data, including image paths, menu items, and initial rating (0)
     {
+        id: 0,  
         name: "Food Court",
         image: "images/bachler.jpg",
         description: "Delicious pizzas made with fresh ingredients.",
@@ -25,6 +26,7 @@ const restaurants = [
         reviews: [],
     },
     {
+        id: 1,
         name: "KFC",
         image: "images/cassino.jpg", // Replace with actual image path
         description: "Delicious pizzas made with fresh ingredients.",
@@ -39,6 +41,7 @@ const restaurants = [
         reviews: [],
       },
       {
+        id: 2,
         name: "Green Garden",
         image: "images/goodvibes.jpg", // Replace with actual image path
         description: "Delicious pizzas made with fresh ingredients.",
@@ -51,6 +54,7 @@ const restaurants = [
         reviews: [],
       },
       {
+        id: 3,
         name: "Tasty Treats",
         image: "images/hungers.jpg", // Replace with actual image path
         description: "Delicious pizzas made with fresh ingredients.",
@@ -68,6 +72,7 @@ const restaurants = [
         reviews: [],
       },
       {
+        id: 4,
         name: "Amer Food",
         image: "images/jourcs.jpg", // Replace with actual image path
         description: "Delicious pizzas made with fresh ingredients.",
@@ -80,6 +85,7 @@ const restaurants = [
         reviews: [],
       },
       {
+        id: 5,
         name: "Safus Pizza",
         image: "images/peribites.jpg", // Replace with actual image path
         description: "Delicious pizzas made with fresh ingredients.",
@@ -93,7 +99,8 @@ const restaurants = [
         reviews: [],
       },
       {
-        name: "Safus Pizza",
+        id: 6,
+        name: "Safus",
         image: "images/tastytreat.jpg", // Replace with actual image path
         description: "Delicious pizzas made with fresh ingredients.",
         menu: [
@@ -106,7 +113,8 @@ const restaurants = [
         reviews: [],
       },
       {
-        name: "Safus Pizza",
+        id: 7,
+        name: "Safus",
         image: "images/vugbari.jpg", 
         description: "Delicious pizzas made with fresh ingredients.",
         menu: [
@@ -264,6 +272,7 @@ function openReviewForm(menuItem) {
     submitButton.textContent = 'Submit Review';
     submitButton.addEventListener('click', () => submitReview(menuItem, reviewText.value)); // Call the missing function
     formContainer.appendChild(submitButton);
+    
 
     // Close button for modal
     const closeButton = document.createElement('button');
@@ -296,7 +305,7 @@ reviewForm.addEventListener('submit', (event) => {
     };
     // - Access the selected restaurant using `selectedRestaurantIndex` (replace with your logic)
     // Get the selected restaurant index (logic based on your implementation)
-    const selectedRestaurantIndex = /* Get index of selected restaurant */
+    const selectedRestaurantIndex = 1;/* Get index of selected restaurant */
 
         // Add review data to the selected restaurant (replace with your data storage logic)
         restaurants[selectedRestaurantIndex].reviews.push(reviewData);
@@ -312,7 +321,7 @@ reviewForm.addEventListener('submit', (event) => {
     // - Call `submitReview` function if needed (for additional actions)
 
     // Example placeholder for calling submitReview (replace with your implementation)
-    submitReview(/* review data */ /* selected restaurant index */);
+    submitReview(reviewData, selectedRestaurantIndex);
 });
 
 // fixed part 1
