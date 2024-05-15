@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Page</title>
+  </head>
+<body>
+
+  <section id="restaurant-list-section">
+    <h2>Restaurants</h2>
+    <ul id="restaurant-list"></ul>
+  </section>
+
+  <section id="menu-section" class="hidden">
+    <h2>Menu</h2>
+    <ul id="menu-items"></ul>
+  </section>
+
+  <section id="review-section" class="hidden">
+    <h2>Review</h2>
+    <form id="review-form">
+      <label for="question1">Question 1:</label>
+      <input type="text" id="question1" required>
+      <label for="question2">Question 2:</label>
+      <input type="text" id="question2" required>
+      <label for="comment">Comment:</label>
+      <textarea id="comment" required></textarea>
+
+      <label for="rating">Rating:</label>
+      <div id="rating-container">
+        <input type="radio" id="rating" name="rating" value="5">
+        <label for="rating">⭐⭐⭐⭐⭐</label>
+        <input type="radio" id="rating" name="rating" value="4">
+        <label for="rating">⭐⭐⭐⭐</label>
+        <input type="radio" id="rating" name="rating" value="3">
+        <label for="rating">⭐⭐⭐</label>
+        <input type="radio" id="rating" name="rating" value="2">
+        <label for="rating">⭐⭐</label>
+        <input type="radio" id="rating" name="rating" value="1">
+        <label for="rating">⭐</label>
+      </div>
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </section>
+
+  <section id="user-reviews-section" class="hidden">
+    <h2>User Reviews</h2>
+    <ul id="user-reviews-list"></ul>
+  </section>
+
+  <button id="sort-button" class="hidden">Sort Restaurants</button>
+
+  <button id="next-button" class="disabled">Next</button>
+
+  <script src="resturent.js"></script>
+</body>
+</html>
