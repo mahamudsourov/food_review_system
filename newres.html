@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Finder</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.40.0/dist/daisyui.min.css" rel="stylesheet">
+</head>
+
+<body class="container mx-auto">
+    <header class="bg-gray-800 text-white p-4">
+        <h1 class="text-2xl font-bold">Restaurant Finder</h1>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section id="restaurant-list" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        </section>
+
+        <section id="menu-card" class="hidden">
+        </section>
+
+        <section id="user-reviews" class="mt-8">
+            <h2 class="text-xl font-bold mb-4">User Reviews</h2>
+        </section>
+
+        <div id="review-modal" class="modal hidden">
+        </div>
+
+        <section id="sort-form" class="mt-8">
+            <h2 class="text-xl font-bold mb-4">Sort Restaurants</h2>
+            <form id="sort-restaurant-form">
+                <div class="form-control mb-2">
+                    <label for="sort-by" class="label">Sort By:</label>
+                    <select id="sort-by" name="sort-by" class="select select-bordered w-full">
+                        <option value="name">Name (A-Z)</option>
+                        <option value="rating">Rating (High-Low)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Sort</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="newres.js"></script>
+</body>
+
+</html>
