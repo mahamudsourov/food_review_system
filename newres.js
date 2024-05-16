@@ -157,7 +157,7 @@ function showReviewModal(restaurant, menuItem) {
     <form id="review-form">
       <div class="form-control mb-2">
         <label for="comment" class="label">Comment:</label>
-        <textarea id="comment" name="comment" class="textarea textarea-bordered h-24" required></textarea>
+        <textarea id="comment" name="comment" class="textarea textarea-bordered h-24 w-full" required></textarea>
       </div>
       <div class="form-control mb-2">
         <label for="rating" class="label">Rating:</label>
